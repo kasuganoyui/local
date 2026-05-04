@@ -75,10 +75,13 @@ alwaysApply: true
 - `util/common.ts`: 前端界面或脚本可能使用的函数
 - `util/mvu.ts`: MVU 角色卡可能使用的函数
 
+<<<<<<< HEAD
 ### 同步脚本配置文件结构
 
 如果你需要编写或修改酒馆同步脚本 (`tavern_sync`) 所用的 YAML 配置文件（角色卡、世界书、预设、设置等），请参考 `dist/type/` 下的 `.zh.ts` 文件，它们用 Zod 定义了配置文件的所有字段、类型和中文说明。对应的 JSON Schema 文件在 `dist/schema/` 下，可在 YAML 文件顶部用 `# yaml-language-server: $schema=../dist/schema/xxx.zh.json` 引用以获得编辑器自动补全和校验。
 
+=======
+>>>>>>> 83d9038af3d5ad60dd9744400c8b94779c47044e
 ## 特殊导入方式
 
 ### 导入文件内容
