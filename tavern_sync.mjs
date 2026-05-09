@@ -65769,7 +65769,6 @@ const Script = strictObject({
     })
         .prefault({}),
     data: record(schemas_string(), any()).prefault({}),
-    export_config: record(schemas_string(), any()).prefault({}),
 })
     .superRefine((data, context) => {
     if (data.content === undefined && data.file === undefined) {
@@ -65886,9 +65885,6 @@ const extensions_Extensions = Extensions.transform(data => {
             }
             if (_.isEmpty(script.data)) {
                 _.unset(script, 'data');
-            }
-            if (_.isEmpty(script.export_config)) {
-                _.unset(script, 'export_config');
             }
         }
         else {
@@ -66448,7 +66444,6 @@ const extensions_zh_zh_to_en_map = {
     按钮: 'button',
     按钮列表: 'buttons',
     数据: 'data',
-    导出配置: 'export_config',
     可见: 'visible',
     图标: 'icon',
     颜色: 'color',
@@ -66471,7 +66466,6 @@ const extensions_zh_Script = strictObject({
     })
         .prefault({}),
     数据: record(schemas_string(), any()).prefault({}),
-    导出配置: record(schemas_string(), any()).prefault({}),
 })
     .superRefine((data, context) => {
     if (data.内容 === undefined && data.文件 === undefined) {
