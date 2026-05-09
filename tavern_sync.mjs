@@ -65769,7 +65769,10 @@ const Script = strictObject({
     })
         .prefault({}),
     data: record(schemas_string(), any()).prefault({}),
+<<<<<<< HEAD
     export_config: record(schemas_string(), any()).prefault({}),
+=======
+>>>>>>> c3c8df31b7e860053e3689eef0f82a0a89f3a481
 })
     .superRefine((data, context) => {
     if (data.content === undefined && data.file === undefined) {
@@ -65887,9 +65890,12 @@ const extensions_Extensions = Extensions.transform(data => {
             if (_.isEmpty(script.data)) {
                 _.unset(script, 'data');
             }
+<<<<<<< HEAD
             if (_.isEmpty(script.export_config)) {
                 _.unset(script, 'export_config');
             }
+=======
+>>>>>>> c3c8df31b7e860053e3689eef0f82a0a89f3a481
         }
         else {
             if (!script.icon.trim() || script.icon.trim() === 'fa-solid fa-folder') {
@@ -66448,7 +66454,10 @@ const extensions_zh_zh_to_en_map = {
     按钮: 'button',
     按钮列表: 'buttons',
     数据: 'data',
+<<<<<<< HEAD
     导出配置: 'export_config',
+=======
+>>>>>>> c3c8df31b7e860053e3689eef0f82a0a89f3a481
     可见: 'visible',
     图标: 'icon',
     颜色: 'color',
@@ -66471,7 +66480,10 @@ const extensions_zh_Script = strictObject({
     })
         .prefault({}),
     数据: record(schemas_string(), any()).prefault({}),
+<<<<<<< HEAD
     导出配置: record(schemas_string(), any()).prefault({}),
+=======
+>>>>>>> c3c8df31b7e860053e3689eef0f82a0a89f3a481
 })
     .superRefine((data, context) => {
     if (data.内容 === undefined && data.文件 === undefined) {
