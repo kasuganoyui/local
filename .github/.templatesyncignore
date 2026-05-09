@@ -2,3 +2,5 @@
 @types
 dist
 README.md
+tavern_sync.yaml
+.cursor/rules/项目基本概念.mdc
