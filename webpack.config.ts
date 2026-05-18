@@ -453,9 +453,13 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
             { from: 'vue-final-modal', imports: ['useModal'] },
             { from: 'zod', imports: ['z'] },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             { from: 'type-fest', imports: [['*', 'TypeFest']], type: true },
 >>>>>>> e07e4847e8577cd53101e27231abf7ad096e7318
+=======
+            { from: 'type-fest', imports: [['*', 'TypeFest']], type: true },
+>>>>>>> 7bdcf6686f559c588cd3e4b41cdfc5e6dd270e6f
           ],
         }),
         unpluginVueComponents({
