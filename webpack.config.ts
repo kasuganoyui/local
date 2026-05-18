@@ -87,16 +87,16 @@ function watch_tavern_helper(compiler: webpack.Compiler) {
       io = new Server(port, { cors: { origin: '*' } });
       console.info(`\x1b[36m[tavern_helper]\x1b[0m 已启动酒馆监听服务`);
       io.on('connect', socket => {
-        console.info(`\x1b[36m[tavern_helper]\x1b[0m 成功连接到酒馆网页 '${socket.id}', 初始化推送...`);
+        console.info(`\x1b[36m[tavern_helper]\x1b[0m 成功连接到酒馆网�?'${socket.id}', 初始化推�?..`);
         io.emit('iframe_updated');
         socket.on('disconnect', reason => {
-          console.info(`\x1b[36m[tavern_helper]\x1b[0m 与酒馆网页 '${socket.id}' 断开连接: ${reason}`);
+          console.info(`\x1b[36m[tavern_helper]\x1b[0m 与酒馆网�?'${socket.id}' 断开连接: ${reason}`);
         });
       });
     }
 
     compiler.hooks.done.tap('watch_tavern_helper', () => {
-      console.info('\n\x1b[36m[tavern_helper]\x1b[0m 检测到完成编译, 推送更新事件...');
+      console.info('\n\x1b[36m[tavern_helper]\x1b[0m 检测到完成编译, 推送更新事�?..');
       if (compiler.options.plugins.some(plugin => plugin instanceof HtmlWebpackPlugin)) {
         io.emit('message_iframe_updated');
       } else {
@@ -109,7 +109,7 @@ function watch_tavern_helper(compiler: webpack.Compiler) {
 let watcher: FSWatcher;
 const dump = () => {
   exec('pnpm dump', { cwd: import.meta.dirname });
-  console.info('\x1b[36m[schema_dump]\x1b[0m 已将所有 schema.ts 转换为 schema.json');
+  console.info('\x1b[36m[schema_dump]\x1b[0m 已将所�?schema.ts 转换�?schema.json');
 };
 const dump_debounced = _.debounce(dump, 500, { leading: true, trailing: false });
 function schema_dump(compiler: webpack.Compiler) {
@@ -131,7 +131,7 @@ function schema_dump(compiler: webpack.Compiler) {
 let child_process: ChildProcess;
 const bundle = () => {
   exec('pnpm sync bundle all', { cwd: import.meta.dirname });
-  console.info('\x1b[36m[tavern_sync]\x1b[0m 已打包所有配置了的角色卡/世界书/预设');
+  console.info('\x1b[36m[tavern_sync]\x1b[0m 已打包所有配置了的角色卡/世界�?预设');
 };
 const bundle_debounced = _.debounce(bundle, 500, { leading: true, trailing: false });
 function tavern_sync(compiler: webpack.Compiler) {
@@ -452,14 +452,8 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
             { from: 'klona', imports: ['klona'] },
             { from: 'vue-final-modal', imports: ['useModal'] },
             { from: 'zod', imports: ['z'] },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             { from: 'type-fest', imports: [['*', 'TypeFest']], type: true },
->>>>>>> e07e4847e8577cd53101e27231abf7ad096e7318
-=======
             { from: 'type-fest', imports: [['*', 'TypeFest']], type: true },
->>>>>>> 7bdcf6686f559c588cd3e4b41cdfc5e6dd270e6f
           ],
         }),
         unpluginVueComponents({
