@@ -3,4 +3,5 @@
 dist
 README.md
 tavern_sync.yaml
+tavern_sync_tauritavern.mjs
 .cursor/rules/项目基本概念.mdc
