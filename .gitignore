@@ -12,6 +12,8 @@ pnpm-debug.log*
 auto-imports.d.ts
 components.d.ts
 
+.kilo/kilo.jsonc
+
 tavern_sync.yaml
 tavern_sync_tauritavern.mjs
 dist/tavern_sync.yaml
